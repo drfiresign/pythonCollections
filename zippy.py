@@ -9,11 +9,15 @@
 # If you use .append(), you'll want to pass it a tuple of new values.
 
 
-def combo(a, b):
-    e = []
-    for i, j in zip(a, b):
-        e.append((i, j))
-    return e
+def combo1(a, b):
+    return list(zip(a, b))
 
 
-combo([1, 2, 3], 'abc')
+def combo2(a, b):
+    c = []
+    for i in range(0, len(a)):
+        c.append((a[i], b[i]))
+    return c
+
+
+print(combo2([1, 2, 3], 'abc'))
